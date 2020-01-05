@@ -24,6 +24,7 @@ Example 3:
 In case of arrow functions the 'this' keyword has a lexical scope (or something like a parent scope)
 
 Example 4:
+
 	// This wont work
 	let person = {
 		name : 'Ryan',
