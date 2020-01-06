@@ -1,6 +1,8 @@
 # ES6Basics
 
-ECMAScript is language and Javascript is the language
+ECMAScript is a Standard for scripting languages such as JavaScript, JScript, TypeScript etc. 
+It is a trademark scripting language specification. JavaScript is a language based on ECMAScript. 
+JavaScript is considered as one of the most popular implementations of ECMAScript.
 
 Not all browsers support ES6
 
