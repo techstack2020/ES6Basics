@@ -8,69 +8,71 @@ executed and a possible return value is passed as an argument.
 
 Example 1: 
 
-let promise = new Promise(function(resolve, reject){
-  setTimeout(function(){ // setTimeout to simulate async task
-    resolve("Resolved");
-  }, 1000);
-  
-});
+	let promise = new Promise(function(resolve, reject){
+	  setTimeout(function(){ // setTimeout to simulate async task
+		resolve("Resolved");
+	  }, 1000);
+	  
+	});
 
-promise.then(function(data){
-  console.log(data);
-});
+	promise.then(function(data){
+	  console.log(data);
+	});
 
 Example 2:
 
-let promise = new Promise(function(resolve, reject){
-  setTimeout(function(){ // setTimeout to simulate async task
-    resolve("Resolved");
-  }, 1000);
-  
-  setTimeout(function(){
-    reject("Rejected!");
-  }, 1500);
-  
-});
-
-promise.then(function(data){
-  console.log(data);
-}).catch(function(error){
-  console.log(error);
-});
-
-Example 3: Usage of all method. If all promises resolve then method is called. If any promise rejects catch callback is called.
-
-let promise1 = new Promise(function(resolve, reject){
-  setTimeout(function(){ // setTimeout to simulate async task
-    resolve("Resolved 1");
-  }, 1000);
-});
-
-let promise2 = new Promise(function(resolve, reject){
-  setTimeout(function(){ // setTimeout to simulate async task
-    resolve("Resolved 2");
-  }, 1000);
-});
-
-Promise.all([promise1, promise2])
-      .then((success) => console.log(success))
-      .catch((error) => console.log(error));
+	let promise = new Promise(function(resolve, reject){
+	  setTimeout(function(){ // setTimeout to simulate async task
+		resolve("Resolved");
+	  }, 1000);
 	  
-Example 4: Usage of race method. If the first promise that completes execution resolves sucess is returned otherwise error.
+	  setTimeout(function(){
+		reject("Rejected!");
+	  }, 1500);
+	  
+	});
 
-let promise1 = new Promise(function(resolve, reject){
-  setTimeout(function(){ // setTimeout to simulate async task
-    reject("Rejected 1");
-  }, 1000);
-});
+	promise.then(function(data){
+	  console.log(data);
+	}).catch(function(error){
+	  console.log(error);
+	});
 
-let promise2 = new Promise(function(resolve, reject){
-  setTimeout(function(){ // setTimeout to simulate async task
-    resolve("Resolved 2");
-  }, 800);
-});
+Example 3: 
+Usage of all method. If all promises resolve then method is called. If any promise rejects catch callback is called.
+
+	let promise1 = new Promise(function(resolve, reject){
+	  setTimeout(function(){ // setTimeout to simulate async task
+		resolve("Resolved 1");
+	  }, 1000);
+	});
+
+	let promise2 = new Promise(function(resolve, reject){
+	  setTimeout(function(){ // setTimeout to simulate async task
+		resolve("Resolved 2");
+	  }, 1000);
+	});
+
+	Promise.all([promise1, promise2])
+		  .then((success) => console.log(success))
+		  .catch((error) => console.log(error));
+	  
+Example 4: 
+Usage of race method. If the first promise that completes execution resolves sucess is returned otherwise error.
+
+	let promise1 = new Promise(function(resolve, reject){
+	  setTimeout(function(){ // setTimeout to simulate async task
+		reject("Rejected 1");
+	  }, 1000);
+	});
+
+	let promise2 = new Promise(function(resolve, reject){
+	  setTimeout(function(){ // setTimeout to simulate async task
+		resolve("Resolved 2");
+	  }, 800);
+	});
 
 
-Promise.race([promise1, promise2])
-      .then((success) => console.log(success))
-      .catch((error) => console.log(error));
+	Promise.race([promise1, promise2])
+		  .then((success) => console.log(success))
+		  .catch((error) => console.log(error));
