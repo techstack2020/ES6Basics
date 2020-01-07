@@ -13,10 +13,10 @@ Even though JavaScript never had built-in modules, the community has converged o
 		* Names ('util'): What modules names refer to has to be configured.
 	* Modules are singletons. Even if a module is imported multiple times, only a single “instance” of it exists.
 	
-Examples 1:
+Example 1:
 
 	external.js
-	-----------
+	--------------------
 	
 	export let myVariable = 1000;
 	export function addition(a, b){
@@ -27,10 +27,35 @@ Examples 1:
 	}
 	
 	app.js
-	--------------
+	---------------------
 	import myFunction from './external.js';
 	import {myVariable} from './external.js';
 	import {addition} from './external.js';
+
+	myFunction('Neat');
+	console.log(myVariable);
+	console.log(addition(35, 25));
+	
+Example : 2
+
+	external.js
+	--------------------
+	let myVariable = 1000;
+
+	function addition(a, b){
+		return a-b;
+	}
+
+	export {myVariable, addition}; 	// Grouping of exports
+
+	export default function(text){
+		console.log(`Modules are ${text}`);
+	}
+
+	app.js
+	---------------------
+	import myFunction from './external.js';
+	import {myVariable, addition} from './external.js';		// Grouping of imports
 
 	myFunction('Neat');
 	console.log(myVariable);
