@@ -79,4 +79,23 @@ Even though JavaScript never had built-in modules, the community has converged o
 
 	console.log(myVar);
 	console.log(addNum(35, 25));
+	
+## Example : 4 (import all)
+
+	external.js
+	---------------------
+	let myVariable = 1000;
+
+	function addition(a, b){
+		return a-b;
+	}
+	export {myVariable, addition};
+	
+	app.js
+	---------------------
+	import myFunction from './external.js';
+	import * as extObj from './external.js';
+
+	console.log(extObj.myVariable);
+	console.log(extObj.addition(35, 25));
 
