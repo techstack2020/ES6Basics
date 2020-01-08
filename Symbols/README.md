@@ -1,6 +1,6 @@
-#Cheat Sheet – Symbols
+# Cheat Sheet – Symbols
 
-##What Symbols Are
+## What Symbols Are
 Symbols are a new primitive type in ES6. Basically, a Symbol is a unique ID.
 However, you don’t see the ID (like 120) but you only got your symbol which
 represents the ID.
@@ -26,6 +26,7 @@ These symbols are registered in a global symbol registry and therefore the follo
 
 ## Where would you use Symbols?
 As they are unique symbols are useful as object keys.
+
 	let obj = {
 	 [symbol]: 22,
 	 [symbol2]: 'symbol assigned'
