@@ -16,7 +16,14 @@ npm is used to do package management. It is like Maven
 	- Packages are downloaded to a folder named node-modules
 	- If node-modules is deleted, simply run npm-install again
 	
-Installation :
+## Installation :
 
 - Download zip from https://nodejs.org/en/download/ and configure path variable in windows
 - npm -v (To verify)
+
+## Useful Video Links for ES6
+
+es6-bootcamp-next-generation-javascript : https://cognizant.udemy.com/course/es6-bootcamp-next-generation-javascript/learn/lecture/5332674#overview
+
+Lets Learn ES6 : https://www.youtube.com/playlist?list=PL57atfCFqj2h5fpdZD-doGEIs0NZxeJTX
+
