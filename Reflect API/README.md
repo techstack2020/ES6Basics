@@ -67,6 +67,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 ## Reflect and prototypes
 
 	### Way to get prototype of an object
+	
 		class Person {
 		  constructor(name, age){
 			this.name = name;
@@ -99,7 +100,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 		console.log (Reflect.getPrototypeOf(person) == Person.prototype); // false
 		console.log (Reflect.getPrototypeOf(person)); 
 
-	## Accessing and setting properties with reflect
+## Accessing and setting properties with reflect
 	
 		Example 1:
 		
