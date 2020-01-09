@@ -102,7 +102,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 
 ## Accessing and setting properties with reflect
 	
-		Example 1:
+####	Example 1:
 		
 		class Person {
 		  constructor(name, age){
@@ -118,7 +118,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 		console.log(Reflect.get(person, 'name', [])); // Getting a value using reflect
 		console.log(person.name); // Usual style
 	
-		Example 2:
+####	Example 2:
 		
 		class Person {
 		  constructor(name, age){
@@ -139,7 +139,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 
 ## Creating and deleting properties with Reflect
 	
-		Example 1: Defining a new property
+####	Example 1: Defining a new property
 		
 		class Person {
 		  constructor(name, age){
@@ -157,7 +157,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 
 		console.log(person.hobbies);
 		
-		Example 2 : Deleting a property
+####	Example 2 : Deleting a property
 		
 		class Person {
 		  constructor(name, age){
@@ -171,7 +171,7 @@ Therefore, the Reflect API provides useful methods to create, manipulate and que
 		Reflect.deleteProperty(person, 'age');
 		console.log(person.age);
 		
-		Example 3 : Preventing an object from extension
+####	Example 3 : Preventing an object from extension
 		
 		class Person {
 		  constructor(name, age){
